@@ -1,0 +1,17 @@
+import java.util.Scanner;
+//Receber 10 nomes para compor uma lista - criar array de 10 posicoes.
+//Imprimir as posicoes 3, 7 e 9 desta lista.
+
+public class teste {
+
+
+    public static void main(String[] args) {
+
+        Scanner scNome = new Scanner(System.in);
+        String[] nomes = new String[10];
+        for (int i = 0; i <= 9; i++) {
+            nomes[i] = scNome.nextLine();
+        }
+        System.out.println(nomes[2] + ", " + nomes[6] +", " + nomes[8]);
+    }
+}
