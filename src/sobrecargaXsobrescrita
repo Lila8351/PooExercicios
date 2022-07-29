@@ -1,0 +1,59 @@
+package PackSobrecarga;
+//testando com objeto
+
+public class testandoComObjeto {
+    public float basePeq, baseGnd, altura;
+
+    public float Area(){
+        return ((basePeq+baseGnd)*altura/2);
+    }
+
+    public testandoComObjeto(float basePeq, float baseGnd, float altura) {
+        this.basePeq = basePeq;
+        this.baseGnd = baseGnd;
+        this.altura = altura;
+    }
+
+    testandoComObjeto quad1 = new testandoComObjeto(basePeq, baseGnd, altura);
+//Tanto faz se é quadrado, retângulo ou trapézio, o jeito de calcular é o mesmo.
+}
+
+
+
+
+
+
+package PackSobrecarga;
+
+//O nome da função é o mesmo, só muda o jeito que aplpica.
+        public class SobrecargaMesmo {
+            public static void area (float lado){
+                System.out.println("Area do quadrado é :" + lado*lado);
+            }
+
+            public static void area (float lado1, float lado2){
+                System.out.println("Ja a área do retângulo é: "+ lado1*lado2);
+            }
+
+            public static void area (float base1, float base2, float altura){
+                System.out.println("E a area do trapézio é: "+((base1+base2)*altura)/2);
+            }
+        }
+
+
+
+
+
+
+
+package PackSobrecarga;
+
+public class Main {
+    public static void main(String[] args) {
+        SobrecargaMesmo.area(1);
+        SobrecargaMesmo.area(2,3);
+        SobrecargaMesmo.area(4,5,6);
+
+    System.out.println("Resultado do exercicio acima");
+    }
+}
