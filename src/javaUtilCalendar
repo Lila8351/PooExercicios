@@ -1,0 +1,16 @@
+import java.util.Calendar;
+
+public class sauda {
+    public static void main(String[] args) {
+        Calendar metodo = Calendar.getInstance();
+        int hora = metodo.get(Calendar.HOUR_OF_DAY);
+
+        if (hora > 5 && hora < 13){
+            System.out.println("Bom dia! Bora tomar café pra começar o dia bem?");  
+        } else if (hora > 13 && hora < 19){
+            System.out.println("Boa tarde =)");
+        }else {
+            System.out.println("Boa noite zzZZZZzZzz");
+        }
+    }
+}
